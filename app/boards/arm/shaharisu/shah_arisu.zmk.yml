@@ -1,0 +1,10 @@
+file_format: "1"
+id: shah_arisu
+name: Shah Arisu
+type: board
+arch: arm
+features:
+  - keys
+outputs:
+  - usb
+  

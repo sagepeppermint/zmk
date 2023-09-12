@@ -1,0 +1,24 @@
+# SPDX-License-Identifier: MIT
+
+CONFIG_SOC_SERIES_STM32F1X=y
+CONFIG_SOC_STM32F103XB=y
+
+# 72MHz system clock
+CONFIG_SYS_CLOCK_HW_CYCLES_PER_SEC=72000000
+
+# CONFIG_PINMUX=y
+CONFIG_PINCTRL=y
+
+# enable GPIO
+CONFIG_GPIO=y
+
+# clock configuration
+CONFIG_CLOCK_CONTROL=y
+
+CONFIG_BUILD_OUTPUT_UF2=y
+CONFIG_BUILD_OUTPUT_UF2_FAMILY_ID="0x5ee21072" 
+# 	default "0x5ee21072" if SOC_STM32F103XE
+# https://github.com/microsoft/uf2/blob/master/utils/uf2families.json
+CONFIG_USE_DT_CODE_PARTITION=y
+
+
