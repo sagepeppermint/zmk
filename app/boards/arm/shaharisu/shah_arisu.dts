@@ -105,14 +105,14 @@ cdc_acm_uart:
 		#address-cells = <1>;
 		#size-cells = <1>;
 
-		boot_partition: partition@0 {
-                        reg = <0x00000000 0x2000>;
+		boot_partition: partition@8000000 {
+                        reg = <0x08000000 0x4000>;
                         read-only;
                 };
 
-                code_partition: partition@2000 {
+                code_partition: partition@8004000 {
                         label = "code";
-                        reg = <0x2000 0x010000>;
+                        reg = <0x08004000 0x010000>;
 						read-only;
                 };
 
@@ -121,9 +121,9 @@ cdc_acm_uart:
                 * Storage partition will be used by FCB/LittleFS/NVS
                 * if enabled.
                 */
-                storage_partition: partition@12000 {
+                storage_partition: partition@8014000 {
                         label = "storage";
-                        reg = <0x0012000 0x00004000>;
+                        reg = <0x08014000 0x00004000>;
                 };
 
 	};
